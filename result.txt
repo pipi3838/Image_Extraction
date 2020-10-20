@@ -1,0 +1,72 @@
+features = [['HSV', 'AutoCorrelogram'], ['RGB', 'AutoCorrelogram'], ['Gray', 'PyramidHOG'], ['HSV', 'LocalColorHistogram'], ['Gray', 'GaborLocalHistogram'], ['Gray', 'GetSIFT']]
+features_list = [f[0] + '_' + f[1] for f in features]
+RunExperiment(FeatureDatabase, 
+              FeatureList=features_list, 
+              MetricList=['cityblock', 'cityblock', 'cityblock', 'cityblock', 'cityblock', 'match'],
+              WeightList=[1.4, 1.2, 0.6, 0.4, 0.06, 1.0])
+
+MAP: 0.368756 - Time: 1568.782123s
+Best: gge_snack(0.811485), women_clothes(0.676658)
+Worst: chair(0.124328), glasses(0.138978)
+
+
+features = [['HSV', 'AutoCorrelogram'], ['RGB', 'AutoCorrelogram'], ['Gray', 'PyramidHOG'], ['HSV', 'LocalColorHistogram'], ['Gray', 'GaborLocalHistogram']]
+features_list = [f[0] + '_' + f[1] for f in features]
+RunExperiment(FeatureDatabase, 
+              FeatureList=features_list, 
+              MetricList=['cityblock', 'cityblock', 'cityblock', 'cityblock', 'cityblock'],
+              WeightList=[1.4, 1.2, 0.6, 0.4, 0.06])
+
+MAP: 0.367589 - Time: 24.504211s
+Best: gge_snack(0.792477), women_clothes(0.675734)
+Worst: chair(0.115313), nba_jersey(0.134758)
+
+
+features = [['HSV', 'AutoCorrelogram'], ['RGB', 'AutoCorrelogram'], ['Gray', 'PyramidHOG'], ['HSV', 'LocalColorHistogram'], ['Gray', 'GaborLocalHistogram']]
+features_list = [f[0] + '_' + f[1] for f in features]
+RunExperiment(FeatureDatabase, 
+              FeatureList=features_list, 
+              MetricList=['cityblock', 'cityblock', 'cityblock', 'cityblock', 'cityblock'],
+              WeightList=[1.2, 1.0, 0.4, 0.4, 0.06])
+
+MAP: 0.365391 - Time: 24.095146s
+Best: gge_snack(0.764883), women_clothes(0.684458)
+Worst: chair(0.109727), nba_jersey(0.125207)
+
+features = [['HSV', 'AutoCorrelogram'], ['RGB', 'AutoCorrelogram'], ['Gray', 'PyramidHOG'], ['HSV', 'LocalColorHistogram'], ['Gray', 'GetSIFT']]
+features_list = [f[0] + '_' + f[1] for f in features]
+RunExperiment(FeatureDatabase, 
+              FeatureList=features_list, 
+              MetricList=['cityblock', 'cityblock', 'cityblock', 'cityblock', 'match'],
+              WeightList=[1.0, 1.0, 0.4, 0.4, 1.0])
+
+
+MAP: 0.364931 - Time: 1809.366271s
+Best: gge_snack(0.804539), women_clothes(0.681502)
+Worst: chair(0.125104), nba_jersey(0.135090)
+
+
+features = [['Gray', 'GetSIFT'], ['HSV', 'LocalColorHistogram'], ['HSV', 'AutoCorrelogram'], ['Gray', 'PyramidHOG'], ['RGB', 'AutoCorrelogram'], ['HSV', 'GlobalColorHistogram'], ['Gray', 'HistogramofOrientedGradients'], ['Gray', 'GetDenseSIFT']]
+features_list = [f[0] + '_' + f[1] for f in features]
+
+RunExperiment(FeatureDatabase, 
+              FeatureList=features_list, 
+              MetricList=['match', 'cityblock', 'cityblock', 'cityblock', 'cityblock', 'cityblock', 'cityblock', 'match'],
+              WeightList=[1.0, 0.4, 1.0, 0.4, 0.6, 0.3, 0.2, 0.4])
+
+MAP: 0.263350 - Time: 5858.469604s
+Best: minnie_dress(0.586102), sprite(0.539135)
+Worst: nba_jersey(0.049250), sweeping_robot(0.077432)
+
+
+
+Color ['HSV', 'AutoCorrelogram']
+MAP: 0.250491 - Time: 0.212125s
+Best: minnie_dress(0.714279), women_clothes(0.603272)
+Worst: chair(0.053646), nba_jersey(0.067401)
+
+Texture ['Gray', 'PyramidHOG']
+MAP: 0.264539 - Time: 11.027809s
+Best: gge_snack(0.775208), goggles(0.622030)
+Worst: glasses(0.083986), nba_jersey(0.116072)
+
